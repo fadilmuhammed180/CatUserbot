@@ -46,7 +46,7 @@ cat_caption += "☣` Modified by :` [𖣘Kᵁᴺᴶᵁ ᴮᴱᴱᴾᵁ➻❥❣�
 
 cat_caption += "👨‍💻' Created by :` Sandeep \n\n"
 
-cat_caption += "**[𖣘DEPLOY CATUSERBOT𖣘](https://github.com/kunjubeepu/CatUserbot)**"
+cat_caption += "**[𖣘DEPLOY CATUSERBOT𖣘](https://github.com/kunjubeepuu/CatUserbot)**"
 
 @borg.on(admin_cmd(pattern=r"alive"))
 
