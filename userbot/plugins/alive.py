@@ -1,54 +1,60 @@
 """Check if userbot alive or not . """
+
 import os
-import time
+
 import asyncio
+
 from telethon import events
-from userbot import StartTime , catdef, catversion
+
+from telethon.tl.types import ChannelParticipantsAdmins
+
 from userbot import ALIVE_NAME, CMD_HELP
+
 from userbot.utils import admin_cmd
+
 from telethon import version
+
 from platform import python_version, uname
+
+ALIVE_PIC = os.environ.get("ALIVE_PIC", None)
+
+if ALIVE_PIC is None:
+
+  CAT_IMG = "https://telegra.ph/file/4117e39218991cdd7379f.jpg"
+
+else:
+
+  CAT_IMG = ALIVE_PIC
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "@Sur_vivor"
 
-ALIVE_PIC = os.environ.get("ALIVE_PIC", None)
-CAT_IMG = ALIVE_PIC
+cat_caption = "**🚴‍♀MY BOT IS RUNNING SUCCESFULLY🚴‍♀ *\n\n"
 
-@borg.on(admin_cmd(outgoing=True, pattern="alive$"))
+cat_caption += "♻️**SYSTEM STATUS**\n\n"
+
+cat_caption += f"🚀`Telethon Version:` **{version.__version__}**\n\n"
+
+cat_caption += f"🔥`Python Version:` **{python_version()}**\n\n"
+
+cat_caption += "🚸**Always With You, My Master!**\n\n"
+
+cat_caption += f"🧞‍♂`Owner Name :` {DEFAULTUSER}\n\n"
+
+cat_caption += "⛷`Database Status :` Databases Functioning Normally!\n\n"
+
+cat_caption += "☣` Modified by :` [𖣘Kᵁᴺᴶᵁ ᴮᴱᴱᴾᵁ➻❥❣♪](http://t.me/kunjubeepu)\n\n"
+
+cat_caption += "👨‍💻' Created by :` Sandeep \n\n"
+
+cat_caption += "**[𖣘DEPLOY CATUSERBOT𖣘](https://github.com/kunjubeepu/CatUserbot)**"
+
+@borg.on(admin_cmd(pattern=r"alive"))
+
 async def amireallyalive(alive):
-    if alive.fwd_from:
-        return
-    reply_to_id = alive.message
-    uptime = catdef.get_readable_time((time.time() - StartTime))
-    if alive.reply_to_msg_id:
-        reply_to_id = await alive.get_reply_message()
 
-    if CAT_IMG:
-         cat_caption  = f"🚴‍♂️**MY BOT IS RUNNING SUCCESFULLY**\n\n"
-         cat_caption += f"**Database Status: Databases Functioning Normally!**\n"   
-         cat_caption += f"⏳`Telethon Version:` **{version.__version__}**\n"
-         cat_caption += f"⏳`Python Version:` **{python_version()}**\n"
-         cat_caption += f"⏳`CatUserbot Version:` **{catversion}**\n"
-         cat_caption += f"⏳`Cat Uptime:` **{uptime}**\n\n"         
-         cat_caption += f"**Cat is Always With You, My Masters!**\n"
-         cat_caption += f"⏳`Owner Name:` {DEFAULTUSER}\n"   
-         cat_caption += f"⏳`Modified by:` **kunjubeepu**\n\n"         
-         cat_caption += f"**[⚜️DEPLOY CATUSERBOT⚜️](https://github.com/Sur-vivor/CatUserbot)**"
-         await borg.send_file(alive.chat_id, CAT_IMG, caption=cat_caption)
-         await alive.delete()
-    else:
-        await alive.edit("🚴‍♂️**MY BOT IS RUNNING SUCCESFULLY**\n\n"
-                         "**Database Status: Databases Functioning Normally!**\n"
-                         f"⏳`Telethon Version:` **{version.__version__}**\n"
-                         f"⏳`Python Version:` **{python_version()}**\n"
-                         f"⏳`Catuserbot Version:` **{catversion}**\n"
-                         f"⏳`Cat Uptime:` **{uptime}**\n\n"                        
-                         "**Cat is Always With You, My Masters!**\n"                                                
-                         f"⏳`Owner Name:` {DEFAULTUSER}\n"
-                         "⏳`Modified by:` **kunjubeepu**\n\n"
-                         f"**[⚜️DEPLOY CATUSERBOT⚜️](https://github.com/Sur-vivor/CatUserbot)**"
-                        )
+    """ For .alive command, check if the bot is running.  """
 
-CMD_HELP.update({"alive": "`.alive` :\
-      \nUSAGE: Type .alive to see wether your bot is working or not. "
-})
+    await alive.delete()
+
+    await borg.send_file(alive.chat_id, CAT_IMG, caption=cat_caption)
+
