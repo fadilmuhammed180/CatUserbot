@@ -45,7 +45,7 @@ async def amireallyalive(alive):
                          f"⏳`Cat Uptime:` **{uptime}**\n\n"                        
                          "**Cat is Always With You, My Masters!**\n"                                                
                          f"⏳`Owner Name:` {DEFAULTUSER}\n"
-                         "⏳`Modified by:` **kunjubeepu**\n\n"
+                         "⏳`Modified by:` **Sur-vivor**\n\n"
                          f"**[⚜️DEPLOY CATUSERBOT⚜️](https://github.com/Sur-vivor/CatUserbot)**"
                         )
 
