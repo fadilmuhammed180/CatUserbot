@@ -59,7 +59,7 @@ async def _(event):
     if event.fwd_from:
         return
     start = datetime.now()
-    await event.edit("Ping!")
+    await event.edit("🚗Ping!")
     end = datetime.now()
     ms = (end - start).microseconds / 1000
     uptime = catdef.get_readable_time((time.time() - StartTime))
