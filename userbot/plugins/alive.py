@@ -40,7 +40,7 @@ cat_caption += "🚸**Always With You, 👻My Master!**\n\n"
 
 cat_caption += f"🦹`Owner Name😎:` {DEFAULTUSER}\n\n"
 
-cat_caption += "⛷`Database Status :` Databases Functioning Normally!\n\n"
+cat_caption += "⛷`Database Status🧗‍♀ :` Databases Functioning Normally!\n\n"
 
 cat_caption += "☣` Modified by🔧 :` [𖣘Kᵁᴺᴶᵁ ᴮᴱᴱᴾᵁ➻❥❣♪](http://t.me/kunjubeepu)\n\n"
 
