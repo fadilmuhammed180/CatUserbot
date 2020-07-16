@@ -38,7 +38,7 @@ cat_caption += f"🔥`Python Version:` **{python_version()}**\n\n"
 
 cat_caption += "🚸**Always With You, My Master!**\n\n"
 
-cat_caption += f"🧞‍♂`Owner Name :` {DEFAULTUSER}\n\n"
+cat_caption += f"🦹`Owner Name :` {DEFAULTUSER}\n\n"
 
 cat_caption += "⛷`Database Status :` Databases Functioning Normally!\n\n"
 
@@ -46,7 +46,7 @@ cat_caption += "☣` Modified by :` [𖣘Kᵁᴺᴶᵁ ᴮᴱᴱᴾᵁ➻❥❣�
 
 cat_caption += "👨‍💻' Created by :` Sandeep \n\n"
 
-cat_caption += f"**[𖣘DEPLOY CATUSERBOT𖣘](https://github.com/kunjubeepu/CatUserbot)**"
+cat_caption += f"**[𖣘DEPLOY CATUSERBOT𖣘](https://github.com/kunjubeepu/CatUserbot)"
 @borg.on(admin_cmd(pattern=r"alive"))
 
 async def amireallyalive(alive):
