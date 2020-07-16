@@ -47,7 +47,6 @@ cat_caption += "☣` Modified by :` [𖣘Kᵁᴺᴶᵁ ᴮᴱᴱᴾᵁ➻❥❣�
 cat_caption += "👨‍💻' Created by :` Sandeep \n\n"
 
 cat_caption += f"**[𖣘DEPLOY CATUSERBOT𖣘](https://github.com/kunjubeepu/CatUserbot)**"
-)
 @borg.on(admin_cmd(pattern=r"alive"))
 
 async def amireallyalive(alive):
