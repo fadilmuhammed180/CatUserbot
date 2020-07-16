@@ -28,7 +28,7 @@ else:
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "@Sur_vivor"
 
-cat_caption = "**🚴‍♀MY BOT IS RUNNING SUCCESFULLY🚴‍♀ *\n\n"
+cat_caption = "**🚗MY BOT IS RUNNING SUCCESFULLY🚗 *\n\n"
 
 cat_caption += "♻️**SYSTEM STATUS**\n\n"
 
@@ -47,7 +47,7 @@ cat_caption += "☣` Modified by :` [𖣘Kᵁᴺᴶᵁ ᴮᴱᴱᴾᵁ➻❥❣�
 cat_caption += "👨‍💻' Created by :` Sandeep \n\n"
 
 cat_caption += f"**[𖣘DEPLOY CATUSERBOT𖣘](https://github.com/kunjubeepu/CatUserbot)**"
-
+)
 @borg.on(admin_cmd(pattern=r"alive"))
 
 async def amireallyalive(alive):
